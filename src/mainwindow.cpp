@@ -888,7 +888,8 @@ void MainWindow::OnRemove()
     {
         try
         {
-            MoveToTrashImpl(movieFile);
+	  //MoveToTrashImpl(movieFile);
+	  throw "Exception: Trash move is not implemented.";
         }
         catch(ErrorInfoException& ex)
         {

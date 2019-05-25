@@ -72,6 +72,7 @@ class MainWindow : public QMainWindow, IMainWindow, IHistoryList
     QString TR_CLIPBOARD_IS_EMPTY() { return tr("Clipboard is empty.");}
     QString TR_FAILED_TO_INSERT_DIRECTORY_INTO_DATABASE() { return tr("Failed to insert directory into Database.");}
     QString TR_FAILED_TO_INSERT_TAG_INTO_DATABASE() { return tr("Failed to insert tag into Database.");}
+    bool showInGraphicalShell(QWidget*, QString const&);
 
     Ui::MainWindow *ui;
     // setting keys

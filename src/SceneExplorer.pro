@@ -238,3 +238,31 @@ for(tsfile, TRANSLATIONS) {
 #    }
 #}
 ## Copy misc files enss ------------------------------------
+
+SOURCES +=  \
+        osd_linux.cpp \
+        ../../lsMisc/stdosd/SetPrority_linux.cpp \
+        ../../lsMisc/stdQt/stdQt_linux.cpp
+
+LIBS += -framework AppKit
+LIBS += -framework CoreAudio
+LIBS += -framework AudioToolbox
+QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.14
+#QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.11
+
+LIBS += -stdlib=libc++
+
+QMAKE_CXXFLAGS += -stdlib=libc++
+QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -mmacosx-version-min=10.14
+QMAKE_LFLAGS += -mmacosx-version-min=10.14
+
+# rkan original
+LIBS += -framework QtWidgets
+LIBS += -framework QtGui 
+LIBS += -framework QtCore
+LIBS += -framework DiskArbitration
+LIBS += -framework IOKit
+LIBS += -framework QtSql
+LIBS += -framework OpenGL
+LIBS += -framework AGL
